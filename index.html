@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="GeoNames API Example" />
+    <meta name="author" content="Sam Walker-Penn" />
+    <link rel="stylesheet" href="/libs/css/styles.css" />
+    <title>GeoNames API Example</title>
+  </head>
+
+  <body>
+    <h1>GeoNames API Example</h1>
+
+    <table>
+      <tr>
+        <th>API Name</th>
+        <th>API Description</th>
+        <th>API Options</th>
+        <th>Submit</th>
+      </tr>
+
+      <tr>
+        <td>1. Neighbours</td>
+        <td>Returns all neighbours for a country or administrative division</td>
+        <td>
+          <label for="country">Country</label>
+          <select id="country">
+            <option value="GB">Great Britain</option>
+            <option value="ES">Spain</option>
+            <option value="IT">Italy</option>
+            <option value="US">USA</option>
+          </select>
+        </td>
+        <td><button id="submit1">Submit</button></td>
+      </tr>
+
+      <tr>
+        <td>2. Timezone</td>
+        <td>Returns the timezone at the requested destination</td>
+        <td>
+          <label for="latitude">Latitude</label>
+          <input
+            id="latitude"
+            type="number"
+            name="latitude"
+            min="-89"
+            max="89"
+            value="47.01"
+          />
+          <br />
+          <label for="longitude">Longitude</label>
+          <input
+            id="longitude"
+            type="number"
+            name="longitude"
+            min="-179"
+            max="179"
+            value="10.2"
+          />
+        </td>
+        <td><button id="submit2">Submit</button></td>
+      </tr>
+
+      <tr>
+        <td>3. Weather</td>
+        <td>
+          Returns a list of weather stations with the most recent weather
+          observation
+        </td>
+        <td>
+          <label for="north">North</label>
+          <input
+            id="north"
+            type="number"
+            name="north"
+            min="-89"
+            max="89"
+            value="44.1"
+          /><br />
+          <label for="south">South</label>
+          <input
+            id="south"
+            type="number"
+            name="south"
+            min="-89"
+            max="89"
+            value="-9.9"
+          /><br />
+          <label for="east">East</label>
+          <input
+            id="east"
+            type="number"
+            name="east"
+            min="-179"
+            max="179"
+            value="-22.4"
+          /><br />
+          <label for="west">West</label>
+          <input
+            id="west"
+            type="number"
+            name="west"
+            min="-179"
+            max="179"
+            value="55.2"
+          />
+        </td>
+        <td><button id="submit3">Submit</button></td>
+      </tr>
+
+      <tr>
+        <td id="results" colspan="4"></td>
+      </tr>
+    </table>
+
+    <script
+      type="application/javascript"
+      src="/libs/js/jquery-2.2.3.min.js"
+    ></script>
+    <script type="application/javascript" src="/libs/js/script.js"></script>
+  </body>
+</html>
